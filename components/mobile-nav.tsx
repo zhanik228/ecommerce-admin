@@ -80,7 +80,7 @@ export function MobileNav({
     <div className="navtoggler relative hidden max-md:block">
         <Menu onClick={toggleMenu} className="toggle-menu mx-5 w-7 h-7" />
           <nav
-          className={cn("mob-nav hidden absolute flex-col top-[100%] bg-white border rounded p-2 lg:space-x-6", className)}
+          className={cn("mob-nav hidden absolute flex-col top-[100%] dark:bg-slate-700 bg-white border rounded p-2 lg:space-x-6", className)}
           >
             {routes.map((route) => (
               <Link
