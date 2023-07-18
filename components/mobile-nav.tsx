@@ -76,6 +76,11 @@ export function MobileNav({
     });
   }, []);
 
+  const closeMenu = () => {
+    const mobileNav = document.querySelector('.mob-nav');
+    mobileNav?.classList.remove('max-md:flex');
+  }
+
   return (
     <div className="navtoggler relative hidden max-md:block">
         <Menu onClick={toggleMenu} className="toggle-menu mx-5 w-7 h-7" />
@@ -90,6 +95,7 @@ export function MobileNav({
                   "py-2 text-sm font-medium transition-colors hover:text-primary",
                   route.active ? "text-black dark:text-white" :   "text-muted-foreground"
                 )}
+                onClick={closeMenu}
               >
                 {route.label}
               </Link>
